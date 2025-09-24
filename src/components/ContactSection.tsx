@@ -53,7 +53,7 @@ export const ContactSection = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground text-lg font-semibold">
-                  +1 (555) 123-4567
+                  0833449988 / 0836966669
                 </p>
               </CardContent>
             </Card>
@@ -73,23 +73,32 @@ export const ContactSection = () => {
             </Card>
 
             <Card className="bg-card/40 backdrop-blur-sm border-arctic-ice/20">
-              <CardHeader>
-                <CardTitle className="text-arctic-ice flex items-center gap-2">
-                  <MapPin className="h-5 w-5" />
-                  Location
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground">
-                  123 Atlantic Boulevard<br />
-                  Miami, FL 33101
-                </p>
-                {/* Placeholder for Google Maps */}
-                <div className="mt-4 h-48 bg-arctic-deep/30 rounded-lg flex items-center justify-center border border-arctic-ice/20">
-                  <p className="text-arctic-frost">Interactive Map Coming Soon</p>
-                </div>
-              </CardContent>
-            </Card>
+  <CardHeader>
+    <CardTitle className="text-arctic-ice flex items-center gap-2">
+      <MapPin className="h-5 w-5" />
+      Location
+    </CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p className="text-foreground">
+      615 Umgeni Road<br />
+      Durban, 4001
+    </p>
+    {/* Google Maps Embed */}
+    <div className="mt-4 h-48 bg-arctic-deep/30 rounded-lg overflow-hidden border border-arctic-ice/20">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.262332525989!2d31.020215276058!3d-29.99939997489913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a7c6f5c5c5c5%3A0x1ef7a7c6f5c5c5c5!2s615%20Umgeni%20Rd%2C%20Durban%2C%204001!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Atlantic Auto Aircon Location"
+      ></iframe>
+    </div>
+  </CardContent>
+</Card>
 
             <Card className="bg-card/40 backdrop-blur-sm border-arctic-ice/20">
               <CardHeader>

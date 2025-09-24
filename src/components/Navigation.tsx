@@ -3,12 +3,13 @@ import { Car } from "lucide-react";
 
 interface NavigationProps {
   onContactClick?: () => void;
+  onAboutClick?: () => void;
 }
 
-export const Navigation = ({ onContactClick }: NavigationProps) => {
+export const Navigation = ({ onContactClick, onAboutClick }: NavigationProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-arctic-ice/20">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-1 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="p-2 bg-arctic-electric/20 rounded-lg">
@@ -21,7 +22,11 @@ export const Navigation = ({ onContactClick }: NavigationProps) => {
 
         {/* Navigation Items */}
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="text-arctic-ice hover:text-foreground">
+          <Button 
+            variant="ghost" 
+            className="text-arctic-ice hover:text-foreground"
+            onClick={onAboutClick}
+          >
             About Us
           </Button>
           <Button 

@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { InteractiveSnowflake } from "./InteractiveSnowflake";
-import { Facebook, Instagram, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import acCompressorImage from "@/assets/ac-compressor-hero.jpg";
 
 interface HeroSectionProps {
@@ -13,7 +13,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-hero-gradient overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-hero-gradient/50 overflow-hidden pt-10">
       {/* Background glow effects */}
       <div className="hero-glow w-96 h-96 top-1/4 left-1/4" />
       <div className="hero-glow w-64 h-64 bottom-1/4 right-1/4" />
@@ -76,19 +76,33 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         {/* Social Media */}
         <div className="flex items-center justify-center gap-6 mb-16">
           <a 
-            href="#" 
-            className="p-3 bg-arctic-deep/50 rounded-full hover:bg-arctic-ice hover:text-arctic-deep transition-all duration-300 hover:scale-110"
+            href="https://facebook.com/yourpage" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 bg-arctic-deep/50 rounded-full hover:bg-arctic-ice transition-all duration-300 hover:scale-110 flex items-center justify-center"
             aria-label="Follow us on Facebook"
           >
-            <Facebook size={24} />
+            <img 
+              src="/facebook-icon.png" 
+              alt="Facebook" 
+              className="h-8 w-8"  // Increased size
+            />
           </a>
           <a 
-            href="#" 
-            className="p-3 bg-arctic-deep/50 rounded-full hover:bg-arctic-ice hover:text-arctic-deep transition-all duration-300 hover:scale-110"
-            aria-label="Follow us on Instagram"
-          >
-            <Instagram size={24} />
-          </a>
+  href="https://instagram.com/yourprofile" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-4 bg-arctic-deep/50 rounded-full hover:bg-arctic-ice transition-all duration-300 hover:scale-110 flex items-center justify-center"
+  aria-label="Follow us on Instagram"
+>
+  <div className="h-8 w-8 bg-white rounded flex items-center justify-center">
+    <img 
+      src="/instagram-icon.png" 
+      alt="Instagram" 
+      className="h-6 w-6"  // Slightly smaller to fit inside white circle
+    />
+  </div>
+</a>
         </div>
       </div>
     </section>
